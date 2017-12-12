@@ -12,6 +12,12 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+## 2017-12-12, Version 1.2.0
+
+* 1 minor enhancement:
+
+  * readme: match class usage
+
 ## 2017-12-12, Version 1.1.0
 
 * 4 minor enhancements:
