@@ -12,9 +12,18 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
-## YYYY-MM-DD, Version 0.1.0
+## 2017-12-12, Version 1.0.0
+
+* 7 major enhancements:
+
+  * add {Array} property 'fields'
+  * add {Array} property 'codes'
+  * add {Array} property 'messages'
+  * add {Object} property 'field_feedback'
+  * add {Function} property 'count'
+  * add {Function} property 'exists'
+  * add {Function} property 'has_field'
 
 * 1 minor enhancement:
 
   * Initialized project
-

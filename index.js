@@ -8,6 +8,7 @@ module.exports = {
   count: () => {
     // How many errors are there?
     // return this.errors.codes.length
+    return undefined
   },
   exists: () => {
     // Are there any errors?
@@ -16,6 +17,7 @@ module.exports = {
     // } else {
     //   return false
     // }
+    return undefined
   },
   has_field: (field) => {
     // Does it have a specific field?
@@ -24,5 +26,6 @@ module.exports = {
     // } else {
     //   return false
     // }
+    return undefined
   }
 }
