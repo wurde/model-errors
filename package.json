@@ -16,6 +16,14 @@
     "models",
     "orm"
   ],
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE.txt",
+    "CHANGELOG.md",
+    "index.js",
+    "test.js",
+  ],
   "author": "Andy Bettisworth <andy@accreu.com>",
   "license": "MIT",
   "bugs": {
@@ -24,5 +32,8 @@
   "homepage": "https://github.com/wurde/model-errors#readme",
   "devDependencies": {
     "mocha": "^4.0.1"
+  },
+  "engines": {
+    "node": ">= 8"
   }
 }
