@@ -12,6 +12,15 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+## 2017-12-12, Version 1.1.0
+
+* 4 minor enhancements:
+
+  * replace Object for Class
+  * test 'count' getter
+  * test 'exists' getter
+  * test 'has_field' function
+
 ## 2017-12-12, Version 1.0.0
 
 * 7 major enhancements:

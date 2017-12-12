@@ -5,7 +5,17 @@
  */
 
 const assert = require('assert')
-const index = require('./index')
+const ModelErrors = require('./index')
+
+/**
+ * Define class
+ */
+
+class Post {
+  constructor() {
+    this.errors = new ModelErrors()
+  }
+}
 
 /**
  * Assertions
@@ -17,41 +27,68 @@ describe("index.js", () => {
   })
 
   it("should return type Object", () => {
-    assert.equal(index.constructor, Object)
+    let post = new Post()
+    assert.equal(post.errors.constructor, ModelErrors)
   })
 
   it("has {Array} property 'fields'", () => {
-    assert.ok('fields' in index)
-    assert.equal(index.fields.constructor, Array)
+    let post = new Post()
+    assert.ok('fields' in post.errors)
+    assert.equal(post.errors.fields.constructor, Array)
   })
 
   it("has {Array} property 'codes'", () => {
-    assert.ok('codes' in index)
-    assert.equal(index.codes.constructor, Array)
+    let post = new Post()
+    assert.ok('codes' in post.errors)
+    assert.equal(post.errors.codes.constructor, Array)
   })
 
   it("has {Array} property 'messages'", () => {
-    assert.ok('messages' in index)
-    assert.equal(index.messages.constructor, Array)
+    let post = new Post()
+    assert.ok('messages' in post.errors)
+    assert.equal(post.errors.messages.constructor, Array)
   })
 
   it("has {Object} property 'field_feedback'", () => {
-    assert.ok('field_feedback' in index)
-    assert.equal(index.field_feedback.constructor, Object)
+    let post = new Post()
+    assert.ok('field_feedback' in post.errors)
+    assert.equal(post.errors.field_feedback.constructor, Object)
   })
 
   it("has {Function} property 'count'", () => {
-    assert.ok('count' in index)
-    assert.equal(index.count.constructor, Function)
+    let post = new Post()
+    assert.ok('count' in post.errors)
   })
 
   it("has {Function} property 'exists'", () => {
-    assert.ok('exists' in index)
-    assert.equal(index.exists.constructor, Function)
+    let post = new Post()
+    assert.ok('exists' in post.errors)
   })
 
   it("has {Function} property 'has_field'", () => {
-    assert.ok('has_field' in index)
-    assert.equal(index.has_field.constructor, Function)
+    let post = new Post()
+    assert.ok('has_field' in post.errors)
+  })
+
+  it("returns count of fields with errors", () => {
+    let post = new Post()
+    post.errors.codes.push('title_too_short')
+    assert.equal(post.errors.count, 1)
+    post.errors.codes.push('title_too_long')
+    assert.equal(post.errors.count, 2)
+  })
+
+  it("checks if any errors exist", () => {
+    let post = new Post()
+    assert.equal(post.errors.exists, false)
+    post.errors.codes.push('invalid_email')
+    assert.equal(post.errors.exists, true)
+  })
+
+  it("looks up which fields have errors", () => {
+    let post = new Post()
+    post.errors.fields.push('title')
+    assert.equal(post.errors.has_field('title'), true)
+    assert.equal(post.errors.has_field('content'), false)
   })
 })
