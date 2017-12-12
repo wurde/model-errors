@@ -1,0 +1,28 @@
+{
+  "name": "model-errors",
+  "version": "0.1.0",
+  "description": "Add errors to a model.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --no-colors",
+    "test-watch": "mocha --no-colors --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wurde/model-errors.git"
+  },
+  "keywords": [
+    "errors",
+    "models",
+    "orm"
+  ],
+  "author": "Andy Bettisworth <andy@accreu.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wurde/model-errors/issues"
+  },
+  "homepage": "https://github.com/wurde/model-errors#readme",
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}
