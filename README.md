@@ -9,24 +9,26 @@ npm install model-errors --save
 ```
 
 ```javascript
+const ModelErrors = require('model-errors')
+
 class Post {
   constructor(param) {
-    this.errors = model_errors()
+    this.errors = new ModelErrors()
   }
 }
 ```
 
 ```html
-<% if (post.errors.exist()) { %>
+<% if (post.errors.exists) { %>
   <section class="row">
     <div class="col">
       <div class="alert alert-danger">
         <h5>
-          The form contains <b><%= post.errors.count() %></b> errors.
+          The form contains <b><%= post.errors.count %></b> errors.
         </h5>
 
         <ul>
-          <% for (let i=0; i < post.errors.count(); i++) { %>
+          <% for (let i=0; i < post.errors.count; i++) { %>
             <li>
               <%= post.errors.messages[i] %>
             </li>
