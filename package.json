@@ -22,7 +22,7 @@
     "LICENSE.txt",
     "CHANGELOG.md",
     "index.js",
-    "test.js",
+    "test.js"
   ],
   "author": "Andy Bettisworth <andy@accreu.com>",
   "license": "MIT",
