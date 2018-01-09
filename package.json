@@ -1,6 +1,6 @@
 {
   "name": "model-errors",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Add errors to a model.",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,8 @@
     "LICENSE.txt",
     "CHANGELOG.md",
     "index.js",
-    "test.js"
+    "test.js",
+    "lib"
   ],
   "author": "Andy Bettisworth <andy@accreu.com>",
   "license": "MIT",

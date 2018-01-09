@@ -12,6 +12,12 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+## 2018-01-08, Version 2.0.2
+
+* 1 bug fix:
+
+  * include lib in export files
+
 ## 2018-01-08, Version 2.0.1
 
 * 1 bug fix:
