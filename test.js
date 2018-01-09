@@ -5,7 +5,7 @@
  */
 
 const assert = require('assert')
-const ModelErrors = require('./index')
+const model_errors = require('./index')
 
 /**
  * Define class
@@ -13,7 +13,8 @@ const ModelErrors = require('./index')
 
 class Post {
   constructor() {
-    this.errors = new ModelErrors()
+    this.errors = new model_errors.Errors()
+    this.is_valid = model_errors.is_valid
   }
 }
 
@@ -28,7 +29,7 @@ describe("index.js", () => {
 
   it("should return type Object", () => {
     let post = new Post()
-    assert.equal(post.errors.constructor, ModelErrors)
+    assert.equal(post.errors.constructor, model_errors.Errors)
   })
 
   it("has {Array} property 'fields'", () => {

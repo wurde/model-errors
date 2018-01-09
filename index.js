@@ -1,32 +1,13 @@
 'use strict'
 
-class ModelErrors {
-  constructor() {
-    this.fields = []
-    this.codes = []
-    this.messages = []
-    this.field_feedback = {}
-  }
+/**
+ * Dependencies
+ */
 
-  get count() {
-    return this.codes.length
-  }
+const Errors = require('./lib/errors')
+const is_valid = require('./lib/is_valid')
 
-  get exists() {
-    if (this.count > 0) {
-      return true
-    } else {
-      return false
-    }
-  }
-
-  has_field(field) {
-    if (this.fields.includes(field)) {
-      return true
-    } else {
-      return false
-    }
-  }
+module.exports = {
+  Errors: Errors,
+  is_valid: is_valid
 }
-
-module.exports = ModelErrors

@@ -12,6 +12,13 @@ Changes are categorized as follows:
 
 ## [Unreleased]
 
+## 2018-01-08, Version 2.0.0
+
+* 2 major enhancements:
+
+  * Add is_valid check
+  * Namespace ModelErrors as Errors
+
 ## 2017-12-12, Version 1.2.0
 
 * 1 minor enhancement:
